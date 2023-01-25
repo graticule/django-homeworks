@@ -33,6 +33,11 @@
                 <a class="page-link" href="/books/{{prev_date|date:'Y-m-d'}}/">< {{prev_date|date:'Y-m-d'}}</a>
                 </li>
                 {% endif %}
+                {% if current_date %}
+                <li class="page-item active">
+                    <a class="page-link" href="/books/{{current_date|date:'Y-m-d'}}/">{{current_date|date:'Y-m-d'}}</a>
+                </li>
+                {% endif %}
                 {% if next_date %}
                 <li class="page-item">
                     <a class="page-link" href="/books/{{next_date|date:'Y-m-d'}}/">{{next_date|date:'Y-m-d'}} ></a>
